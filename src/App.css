@@ -592,13 +592,13 @@ span.ant-upload-wrapper.css-dev-only-do-not-override-1nkxfe {
 .ant-radio-button-wrapper {
   padding-inline: 0px !important;
 }
-:where(.css-dev-only-do-not-override-1nkxfe).ant-drawer .ant-drawer-body{
-  background-color: #001529;
+.ant-drawer .ant-drawer-body{
+  background-color: #001529 !important;
 }
 .ant-drawer-header{
-  background-color: #001529;
+  background-color: #001529 !important;
 }
-:where(.css-dev-only-do-not-override-1nkxfe).ant-drawer .ant-drawer-close {
+.ant-drawer .ant-drawer-close {
   display: flex;
   justify-content: flex-end;
   color: #fff;
