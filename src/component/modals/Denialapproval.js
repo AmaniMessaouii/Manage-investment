@@ -57,9 +57,11 @@ function Denialapproval({ isModalOpen, handleOk, handleCancel }) {
     const handleSave = () => {
         if (validateForm()) {
             setIsFormValid(true);
+            setSave(true);
 
         } else {
             setOpen(true);
+            setSave(false);
 
         }
     };
@@ -127,7 +129,7 @@ function Denialapproval({ isModalOpen, handleOk, handleCancel }) {
                     <TextArea
                         onChange={handleTextAreaChange}
                         placeholder="사유 입력"
-                        defaultValue={textAreaValue}
+                        value={textAreaValue}
                         style={{
                             height: 120,
                             resize: 'none',

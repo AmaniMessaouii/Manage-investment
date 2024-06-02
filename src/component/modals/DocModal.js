@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { Badge, Button, Modal, Table, Upload } from 'antd'
+import React, { useEffect, useState } from 'react';
+import { Badge, Button, Modal, Table, Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 import NotifModel from './NotifModel';
-
 
 function DocModal({ isModalOpen, handleOk, handleCancel }) {
     const [fileList, setFileList] = useState([]);
@@ -10,6 +9,7 @@ function DocModal({ isModalOpen, handleOk, handleCancel }) {
     const [errorMessage, setErrorMessage] = useState('');
     const [open, setOpen] = useState(false);
     const [save, setSave] = useState(false);
+
     const onChange = ({ fileList: newFileList }) => {
         setFileList(newFileList);
         setIsUploadValid(newFileList.length > 0);
@@ -34,20 +34,27 @@ function DocModal({ isModalOpen, handleOk, handleCancel }) {
         if (!isUploadValid) {
             setErrorMessage('필수입력항목을 입력해주세요.');
             setOpen(true);
-            setSave(false)
+            setSave(false);
         } else {
             handleOk();
             setOpen(true);
             setErrorMessage('저장되었습니다.');
-            setSave(true)
-            setFileList([])
+            setSave(true);
         }
     };
- const cancelModal =()=>{
-    handleCancel()
-    setFileList([])
 
- }
+    const cancelModal = () => {
+        handleCancel();
+        setFileList([]);
+    };
+
+    useEffect(() => {
+        if (!isModalOpen) {
+            setFileList([]);
+            setIsUploadValid(false);
+        }
+    }, [isModalOpen]);
+
     const showModal = () => {
         setOpen(true);
     };
@@ -64,6 +71,7 @@ function DocModal({ isModalOpen, handleOk, handleCancel }) {
             key: 'second',
         },
     ];
+
     const data = [
         {
             key: '1',
@@ -88,11 +96,10 @@ function DocModal({ isModalOpen, handleOk, handleCancel }) {
                 </div>
             ),
         },
-
-
     ];
+
     return (
-        <div className='docModal-Continer'>
+        <div className='docModal-Container'>
             <Modal
                 title="승인거부 사유 입력"
                 className="Modal-investment-container img-crop-container"
@@ -108,7 +115,6 @@ function DocModal({ isModalOpen, handleOk, handleCancel }) {
                             type="primary"
                             onClick={handleFileDownloadClick}
                             style={{ width: '160px', height: '44px' }}
-                        //   disabled={!isUploadValid}
                         >
                             파일 다운로드
                         </Button>
@@ -146,7 +152,7 @@ function DocModal({ isModalOpen, handleOk, handleCancel }) {
                 />
             </div>
         </div>
-    )
+    );
 }
 
-export default DocModal
+export default DocModal;

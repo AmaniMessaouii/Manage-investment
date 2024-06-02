@@ -115,6 +115,7 @@ function InvestmentTypeModal({ isModalOpen, handleOk, handleCancel }) {
     const handleSave = () => {
         if (validateForm()) {
             handleOk();
+            setOpen(true);
             setErrorMessage('저장되었습니다.');
             setSave(true);
             setInputValue({
@@ -124,6 +125,8 @@ function InvestmentTypeModal({ isModalOpen, handleOk, handleCancel }) {
             setFileList([])
         } else {
             setOpen(true);
+            setErrorMessage('필수입력항목을 입력해주세요.');
+            setSave(false);
             setInputValue({
                 input1:"",
                 input2:""
@@ -189,7 +192,7 @@ function InvestmentTypeModal({ isModalOpen, handleOk, handleCancel }) {
             ),
         },
     ];
-
+console.log("save", save)
     return (
         <>
             <Modal
