@@ -585,10 +585,21 @@ span.ant-upload-wrapper.css-dev-only-do-not-override-1nkxfe {
 /* .img-crop-container .ant-modal-content {
   padding: 2em;
 } */
-.ant-radio-group.ant-radio-group-outline.css-dev-only-do-not-override-1nkxfe {
+.ant-radio-group {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
 }
 .ant-radio-button-wrapper {
   padding-inline: 0px !important;
+}
+:where(.css-dev-only-do-not-override-1nkxfe).ant-drawer .ant-drawer-body{
+  background-color: #001529;
+}
+.ant-drawer-header{
+  background-color: #001529;
+}
+:where(.css-dev-only-do-not-override-1nkxfe).ant-drawer .ant-drawer-close {
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
 }
