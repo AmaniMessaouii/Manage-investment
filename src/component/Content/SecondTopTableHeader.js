@@ -20,7 +20,7 @@ function SecondTopTableHeader() {
         },
     ]
     const handleChange = (value) => {
-        console.log(`selected ${value}`);
+        // console.log(`selected ${value}`);
     };
     const showModal = () => {
         setIsModalOpen(true);

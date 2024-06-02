@@ -192,7 +192,6 @@ function InvestmentTypeModal({ isModalOpen, handleOk, handleCancel }) {
             ),
         },
     ];
-console.log("save", save)
     return (
         <>
             <Modal

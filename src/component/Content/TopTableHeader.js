@@ -3,7 +3,7 @@ import { Select } from 'antd'
 import arrowDown from "../../assets/images/Vector.svg"
 function TopTableHeader() {
     const handleChange = (value) => {
-        console.log(`selected ${value}`);
+        // console.log(`selected ${value}`);
     };
 
     const authorizedData = [
