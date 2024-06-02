@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { Badge, Button, Checkbox, Input, Modal, Table } from 'antd';
 import NotifModel from './NotifModel';
 
