@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .topTab-header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ant-select-single {
+        width: auto;
+    }
+
+    .ant-upload-list.ant-upload-list-text {
+        flex-direction: column;
+    }
+
+    span.ant-upload-wrapper.css-dev-only-do-not-override-1nkxfe {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
