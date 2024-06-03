@@ -565,14 +565,14 @@ span.ant-upload-wrapper.css-dev-only-do-not-override-foud43 {
   color: #555;
 }
 span.ant-upload-wrapper.css-dev-only-do-not-override-1nkxfe {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center !important;
 }
 .ant-upload-list.ant-upload-list-text {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px !important;
 }
 .ant-upload-list.ant-upload-list-picture-card {
   width: 100%;
@@ -603,4 +603,7 @@ span.ant-upload-wrapper.css-dev-only-do-not-override-1nkxfe {
   justify-content: flex-end ;
   color: #fff;
   width: 100%;
+}
+:where(.css-dev-only-do-not-override-1nkxfe).ant-layout.ant-layout-has-sider {
+  min-height: 100vh;
 }
