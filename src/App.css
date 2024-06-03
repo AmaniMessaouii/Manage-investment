@@ -604,6 +604,6 @@ span.ant-upload-wrapper.css-dev-only-do-not-override-1nkxfe {
   color: #fff;
   width: 100%;
 }
-:where(.css-dev-only-do-not-override-1nkxfe).ant-layout.ant-layout-has-sider {
-  min-height: 100vh;
+.ant-layout.ant-layout-has-sider {
+  min-height: 100vh !important;
 }
